@@ -1,8 +1,8 @@
 <?php
-$host = "mysql-voting"; // atau bisa jadi "db" tergantung nama service MySQL di Coolify
-$user = "voting";
-$pass = "pemilihan123";
-$db   = "pemilihan_ketua";
+$host = getenv('DB_HOST') ?: 'mysql-voting';  // 'mysql' = nama container database di Coolify
+$user = getenv('DB_USER') ?: 'voting';
+$pass = getenv('DB_PASS') ?: 'pemilihan123';
+$db   = getenv('DB_NAME') ?: 'pemilihan_ketua';
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
