@@ -1,9 +1,8 @@
 <?php
-// Ambil host dari environment variable atau default ke 'localhost'
-$host = getenv('DB_HOST') ?: 'q0wk40ksgs448kg80884wk44'; // 'mysql-db' = nama container MySQL
-$user = getenv('DB_USER') ?: 'voting';
-$pass = getenv('DB_PASS') ?: 'pemilihan123';
-$db   = getenv('DB_NAME') ?: 'pemilihan_ketua';
+$host = "mysql-voting"; // atau bisa jadi "db" tergantung nama service MySQL di Coolify
+$user = "voting";
+$pass = "pemilihan123";
+$db   = "pemilihan_ketua";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
