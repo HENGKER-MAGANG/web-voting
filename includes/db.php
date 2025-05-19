@@ -1,7 +1,7 @@
 <?php
-$host = "localhost";
-$user = "root"; // sesuaikan dengan user database kamu
-$pass = "";     // sesuaikan dengan password database kamu
+$host = "q0wk40ksgs448kg80884wk44";
+$user = "voting"; // sesuaikan dengan user database kamu
+$pass = "pemilihan123";     // sesuaikan dengan password database kamu
 $db   = "pemilihan_ketua";
 
 $conn = mysqli_connect($host, $user, $pass, $db);
