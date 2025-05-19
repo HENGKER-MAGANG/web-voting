@@ -1,6 +1,6 @@
 <?php
 $host = getenv('DB_HOST') ?: 'igg8cog4wkw40444cko8gkkk';  // 'mysql' = nama container database di Coolify
-$user = getenv('DB_USER') ?: 'mysql';
+$user = getenv('DB_USER') ?: 'pemilihan123';
 $pass = getenv('DB_PASS') ?: 'pemilihan123';
 $db   = getenv('DB_NAME') ?: 'pemilihan_ketua';
 
