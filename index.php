@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="text-center">
                 <img src="logo.png" alt="Login" class="w-48 mx-auto mb-4">
                 <h2 class="text-2xl font-bold">Selamat Datang 👋</h2>
-                <p class="text-sm">Silakan login untuk mengikuti pemilihan ketua komunitas</p>
+                <p class="text-sm">Silakan login untuk mengikuti pemilihan ketua</p>
             </div>
         </div>
 
@@ -61,8 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
 
             <div class="mb-4">
-                <label class="block text-sm font-semibold mb-1 text-gray-700">Username / NISN</label>
-                <input name="login" required placeholder="Username (Admin) / NISN (Anggota)"
+                <label class="block text-sm font-semibold mb-1 text-gray-700">NISN</label>
+                <input name="login" required placeholder="NISN"
                     class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
             </div>
 
