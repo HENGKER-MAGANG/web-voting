@@ -103,6 +103,41 @@ $calon = mysqli_query($conn, "SELECT * FROM calon ORDER BY nama");
         </div>
     </section>
 
+    <!-- Tambah Admin -->
+<section class="mb-12">
+    <h2 class="text-2xl font-semibold mb-4 text-purple-700">Tambah Admin</h2>
+    <form method="POST" action="tambah_admin.php" class="bg-white p-6 rounded shadow space-y-4 max-w-lg mx-auto">
+        <input name="username" placeholder="Username" required class="form-control">
+        <input type="password" name="password" placeholder="Password" required class="form-control">
+        <button class="btn btn-primary w-full">Tambah Admin</button>
+    </form>
+
+    <h3 class="text-xl font-semibold mt-10 mb-4 text-gray-700">Data Admin</h3>
+    <div class="overflow-x-auto bg-white rounded shadow">
+        <table class="table table-striped">
+            <thead class="bg-gray-100 text-gray-700">
+                <tr>
+                    <th class="p-3">Username</th>
+                    <th class="p-3">Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $admins = mysqli_query($conn, "SELECT * FROM admin ORDER BY username");
+                while ($admin = mysqli_fetch_assoc($admins)): ?>
+                <tr>
+                    <td class="p-3"><?= htmlspecialchars($admin['username']) ?></td>
+                    <td class="p-3">
+                        <a href="hapus_admin.php?id=<?= $admin['id'] ?>" onclick="return confirm('Yakin ingin menghapus admin ini?')" class="text-red-500 hover:underline">Hapus</a>
+                    </td>
+                </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
     <!-- Logout -->
     <div class="text-center mt-8">
         <a href="../logout.php" class="text-sm text-red-500 hover:underline">&larr; Logout</a>
